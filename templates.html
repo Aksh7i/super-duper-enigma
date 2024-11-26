@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Templates</title>
+    <link rel="stylesheet" href="templates.css">
+</head>
+<body>
+
+    <!-- Header Section Ends----------------------------------------------------->
+    <header>
+        <div class="logo">
+            <h1>Mac Bee</h1>
+        </div>
+        <nav>
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="./templates.html">Templates</a></li>
+                <li><a href="terms.html">Terms & Conditions</a></li>
+                <li><a href="https://365daysgrowth.gumroad.com/l/secondbrain"><button class="cta-button">Get Second Brain 5.0</button></a></li>
+            </ul>
+        </nav>
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776;
+        </div>
+    </header>
+
+    <!-- Hero Section Start------------------------------------------------------------>
+    <section class="hero">
+        <h1>Explore Our Templates</h1>
+        <p>Find the perfect Notion template to organize your life, boost productivity, and manage your finances.</p>
+        <div class="animated-icon">
+            <!-- Add a Notion-inspired icon with CSS animation -->
+            <i class="notion-icon"></i>
+        </div>
+    </section>
+    <!-- Hero Section Ends------------------------------------------------------------>
+     
+
+    <!-- Browse Templates Section Starts----------------------------------------------->
+    <main class="browse-templates">
+        <!-- Search Section -->
+        <section class="search-bar">
+            <input
+                type="text"
+                placeholder="Search for templates..."
+                id="search-input"
+                oninput="handleSearch()"
+            >
+            <button id="filter-button" onclick="toggleFilterDropdown()">
+                <img src="./Assets/filter.png" alt="Filter">
+            </button>
+            
+            <!-- Filter Dropdown -->
+            <div id="filter-dropdown" class="filter-dropdown hidden">
+                <label>
+                    <input type="radio" name="filter" value="Free" onchange="applyFilter(this.value)"> Free
+                </label>
+                <label>
+                    <input type="radio" name="filter" value="Paid" onchange="applyFilter(this.value)"> Paid
+                </label>
+                <label>
+                    <input type="radio" name="filter" value="Best Selling" onchange="applyFilter(this.value)"> Best Selling
+                </label>
+                <label>
+                    <input type="radio" name="filter" value="Newest" onchange="applyFilter(this.value)"> Newest
+                </label>
+            </div>
+            
+        </section>
+
+        <!-- Dynamic Tags -->
+        <section class="dynamic-tags">
+            <div class="tag" onclick="applyTag('Second Brain')">Second Brain</div>
+            <div class="tag" onclick="applyTag('Project Manager')">Project Manager</div>
+            <div class="tag" onclick="applyTag('Task Manager')">Task Manager</div>
+            <div class="tag" onclick="applyTag('Case')">Case</div>
+        </section>
+
+        <!-- Product Cards Section -->
+        <section class="product-cards" id="product-cards">
+            <a href="https://365daysgrowth.gumroad.com/l/examplanner" target="_blank" rel="noopener noreferrer" class="card-link">
+                <div class="card" data-filterType="Free">
+                    <img src="/Assets/product1.png" alt="Template 1" class="card-image">
+                    <div class="card-overlay">
+                        <div class="card-details">
+                            <h3>Exams Manager</h3>
+                            <p>Boost your productivity with this template.</p>
+                            <div class="tags">
+                                <span class="highlight-tag">Productivity</span>
+                                <span class="highlight-tag">Work</span>
+                                <span class="highlight-tag">Planner</span>
+                            </div>
+                            <span class="price">Free</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="https://365daysgrowth.gumroad.com/l/noveltemplate" target="_blank" rel="noopener noreferrer" class="card-link">
+                <div class="card" data-filterType="Paid">
+                    <img src="/Assets/product2.png" alt="Template 1" class="card-image">
+                    <div class="card-overlay">
+                        <div class="card-details">
+                            <h3>Novel Writer</h3>
+                            <p>Boost your productivity with this template.</p>
+                            <div class="tags">
+                                <span class="highlight-tag">Productivity</span>
+                                <span class="highlight-tag">Work</span>
+                                <span class="highlight-tag">Planner</span>
+                            </div>
+                            <span class="price">$25</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="https://365daysgrowth.gumroad.com/l/eatfrog" target="_blank" rel="noopener noreferrer" class="card-link">
+                <div class="card" data-filterType="Paid">
+                    <img src="/Assets/product3.png" alt="Template 1" class="card-image">
+                    <div class="card-overlay">
+                        <div class="card-details">
+                            <h3>Eat That Frog</h3>
+                            <p>Boost your productivity with this template.</p>
+                            <div class="tags">
+                                <span class="highlight-tag">Productivity</span>
+                                <span class="highlight-tag">Work</span>
+                                <span class="highlight-tag">Planner</span>
+                            </div>
+                            <span class="price">$14</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+            <a href="https://365daysgrowth.gumroad.com/l/secondbrain" target="_blank" rel="noopener noreferrer" class="card-link">
+                <div class="card" data-filterType="Paid">
+                    <img src="/Assets/product2.png" alt="Template 1" class="card-image">
+                    <div class="card-overlay">
+                        <div class="card-details">
+                            <h3>Second Brain</h3>
+                            <p>Boost your productivity with this template.</p>
+                            <div class="tags">
+                                <span class="highlight-tag">Productivity</span>
+                                <span class="highlight-tag">Work</span>
+                                <span class="highlight-tag">Planner</span>
+                            </div>
+                            <span class="price">$44</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            
+        </section>
+    </main>
+
+    <!-- Browse Templates Section Ends----------------------------------------------->
+
+    <!-- Footer Section Starts------------------------------------------------------->
+    
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Footer Left: Links Section -->
+            <div class="footer-left">
+                <h4>Notion Templates</h4>
+                <nav class="footer-links">
+                    <a href="./templates.html">Products</a>
+                    <a href="https://365daysgrowth.gumroad.com/l/secondbrain">Second Brain</a>
+                    <a href="https://365daysgrowth.gumroad.com/l/unistudents">Student Brain</a>
+                    <a href="https://365daysgrowth.gumroad.com/l/eatfrog">Eat That Frog</a>
+                    <a href="./privacy.html">Privacy</a>
+                </nav>
+            </div>
+            
+            <!-- Footer Right: Newsletter Subscription -->
+            <div class="footer-right">
+                <p>Join our newsletter</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>© 2024 Notion Templates. All rights reserved.</p>
+            <nav class="footer-bottom-links">
+                <a href="./terms.html">Terms</a>
+                <a href="./privacy.html">Privacy</a>
+                <a href="#">Cookies</a>
+            </nav>
+        </div>
+    </footer>
+    <!-- Footer Section Ends------------------------------------------------------->
+
+    <script src="templates.js"></script>
+</body>
+</html>

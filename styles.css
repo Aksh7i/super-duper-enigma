@@ -1,0 +1,820 @@
+/* Global Styles */
+/* Sets the default font, color, and layout for the entire page */
+body {
+    font-family: Arial, sans-serif; /* Sets the font for the website */
+    color: #333; /* Default text color */
+    margin: 0; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+    background-color: #42c471; /* Sets the background color of the page */
+}
+
+/* Header Styles */
+/* Styles for the header, including alignment, spacing, and background */
+header {
+    display: flex; /* Aligns items in a row */
+    justify-content: space-between; /* Space between logo and navigation */
+    align-items: center; /* Vertically centers items */
+    padding: 1rem 2rem; /* Adds spacing inside the header */
+    background-color: #42c471; /* Green background color for the header */
+    color: white; /* White text color */
+    position: relative; /* Enables positioning of child elements relative to the header */
+}
+
+/* Logo styles inside the header */
+header .logo h1 {
+    margin: 0; /* Removes default margin for the logo heading */
+    font-size: 1.5rem; /* Sets the size of the logo text */
+}
+
+/* Navigation menu styles */
+nav ul {
+    display: flex; /* Displays navigation items in a row */
+    list-style-type: none; /* Removes bullet points from the list */
+    margin: 5px; /* Removes default margin */
+    padding: 0; /* Removes default padding */
+}
+
+/* Styles for individual navigation items */
+nav ul li {
+    margin-left: 2rem; /* Adds spacing between navigation items */
+}
+
+/* Styles for navigation links */
+nav ul li a {
+    font-size: 1.2rem; /* Sets font size for navigation links */
+    color: #fff; /* White text color */
+    text-decoration: none; /* Removes underline from links */
+    padding: 0.5rem 1rem; /* Adds padding for clickable area */
+    display: block; /* Makes the link a block element */
+    font-weight: bold; /* Makes the text bold */
+    transition: background 0.3s ease, color 0.3s ease; /* Adds smooth hover transitions */
+}
+
+/* CTA Button Styles */
+/* Styles for the primary call-to-action button */
+.cta-button {
+    background-color: #28a745; /* Green background color */
+    color: #fff; /* White text color for contrast */
+    font-size: 1.1rem; /* Sets font size */
+    padding: 0.7rem 1.5rem; /* Adds padding around the button */
+    border: none; /* Removes default border */
+    border-radius: 25px; /* Rounds the button corners */
+    margin: -10px auto; /* Centers the button horizontally */
+    display: block; /* Ensures button occupies full width of its container */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    text-transform: uppercase; /* Converts text to uppercase */
+    font-weight: bold; /* Makes text bold */
+    box-shadow: 0 2px 5px rgba(40, 167, 69, 0.5); /* Adds subtle shadow for depth */
+    transition: all 0.3s ease; /* Smooth transition for hover effects */
+}
+
+/* Hover effect for the CTA button */
+.cta-button:hover {
+    background-color: #218838; /* Darker green for hover effect */
+    box-shadow: 0 4px 10px rgba(40, 167, 69, 0.8); /* Adds a brighter shadow on hover */
+}
+
+/* Hamburger Menu Styles */
+/* Initial styles for the hamburger menu */
+.hamburger {
+    display: none; /* Hidden by default */
+    font-size: 2rem; /* Sets font size for the hamburger icon */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+}
+
+/* Media Query for Mobile Styles */
+/* Adjusts styles for screens with max width of 768px */
+@media (max-width: 768px) {
+    /* Displays the hamburger menu for mobile */
+    .hamburger {
+        display: block; /* Makes the hamburger icon visible */
+        cursor: pointer; /* Changes cursor to pointer */
+        z-index: 100; /* Ensures it appears above other elements */
+    }
+
+    /* Hides the default navigation menu */
+    nav ul {
+        display: none; /* Hides navigation items by default */
+        flex-direction: column; /* Arranges items in a column */
+        position: absolute; /* Positions the menu relative to the viewport */
+        top: 60px; /* Places the menu below the header */
+        left: 0; /* Aligns the menu to the left */
+        width: 100%; /* Sets menu width to full screen */
+        background-color: #333; /* Black background for the menu */
+        padding: 1rem 0; /* Adds padding around the menu */
+        gap: 1rem; /* Adds space between menu items */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for depth */
+        transition: all 0.3s ease-in-out; /* Smooth opening/closing animation */
+    }
+
+    /* Center-aligns menu items */
+    nav ul li {
+        list-style: none; /* Removes list-style from items */
+        text-align: center; /* Centers the text */
+    }
+
+    /* Styles for links in the mobile menu */
+    nav ul li a {
+        font-size: 1.2rem; /* Sets font size for links */
+        color: #fff; /* White text color */
+        text-decoration: none; /* Removes underline from links */
+        padding: 0.5rem 1rem; /* Adds padding for clickable area */
+        display: block; /* Makes link a block element */
+        font-weight: bold; /* Makes text bold */
+        transition: background 0.3s ease, color 0.3s ease; /* Smooth hover transitions */
+    }
+
+    /* Hover effect for mobile menu links */
+    nav ul li a:hover {
+        background-color: #007bff; /* Blue background for hover effect */
+        color: #fff; /* Ensures text remains white */
+        border-radius: 5px; /* Rounds the corners of the hover background */
+    }
+
+    /* Styles for the CTA button in the mobile menu */
+    .cta-button {
+        background-color: #28a745; /* Green background color */
+        color: #fff; /* White text color for contrast */
+        font-size: 1.1rem; /* Sets font size */
+        padding: 0.7rem 1.5rem; /* Adds padding around the button */
+        border: none; /* Removes default border */
+        border-radius: 25px; /* Rounds the button corners */
+        margin: 0 auto; /* Centers the button */
+        display: block; /* Ensures button occupies full width of its container */
+        cursor: pointer; /* Changes cursor to pointer on hover */
+        text-transform: uppercase; /* Converts text to uppercase */
+        font-weight: bold; /* Makes text bold */
+        box-shadow: 0 2px 5px rgba(40, 167, 69, 0.5); /* Adds subtle shadow for depth */
+        transition: all 0.3s ease; /* Smooth transition for hover effects */
+    }
+
+    /* Hover effect for the mobile CTA button */
+    .cta-button:hover {
+        background-color: #218838; /* Darker green for hover effect */
+        box-shadow: 0 4px 10px rgba(40, 167, 69, 0.8); /* Adds a brighter shadow on hover */
+    }
+}
+
+
+/* Styling for the hamburger menu icon */
+.hamburger {
+    display: none; /* Hidden by default */
+    font-size: 2rem; /* Size of the hamburger icon */
+    cursor: pointer; /* Indicates clickable element */
+}
+
+@media (max-width: 768px) {
+    /* Mobile-specific styles */
+    
+    /* Display hamburger menu for smaller screens */
+    .hamburger {
+        display: block;
+        cursor: pointer;
+        z-index: 100; /* Ensures it's above other elements */
+    }
+
+    /* Hide navigation menu by default on mobile */
+    nav ul {
+        display: none; /* Hidden until toggled */
+        flex-direction: column; /* Stack items vertically */
+        position: absolute; /* Positioned relative to the screen */
+        top: 60px; /* Below header */
+        left: 0; /* Align to the left edge */
+        width: 100%; /* Full screen width */
+        background-color: #333; /* Dark background for contrast */
+        padding: 1rem 0; /* Add spacing around items */
+        gap: 1rem; /* Space between menu items */
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+        transition: all 0.3s ease-in-out; /* Smooth opening/closing animation */
+    }
+
+    /* Style for individual menu items */
+    nav ul li {
+        list-style: none; /* Remove bullet points */
+        text-align: center; /* Center-align menu items */
+    }
+
+    /* Links in the navigation menu */
+    nav ul li a {
+        font-size: 1.2rem; /* Larger text for readability */
+        color: #fff; /* White text */
+        text-decoration: none; /* Remove underlines */
+        padding: 0.5rem 1rem; /* Add padding for clickable area */
+        display: block;
+        font-weight: bold;
+        transition: background 0.3s ease, color 0.3s ease; /* Smooth hover effects */
+    }
+
+    /* Hover effect for links */
+    nav ul li a:hover {
+        background-color: #007bff; /* Blue background on hover */
+        color: #fff; /* Text remains white */
+        border-radius: 5px; /* Rounded edges */
+    }
+
+    /* Style for Call-to-Action (CTA) button */
+    .cta-button {
+        background-color: #28a745; /* Green button background */
+        color: #fff; /* White text */
+        font-size: 1.1rem; /* Slightly larger font size */
+        padding: 0.7rem 1.5rem; /* Button padding */
+        border: none; /* No border */
+        border-radius: 25px; /* Fully rounded edges */
+        margin: 0 auto; /* Center the button */
+        display: block; /* Take up the full width of its container */
+        cursor: pointer;
+        text-transform: uppercase; /* Capitalize text */
+        font-weight: bold;
+        box-shadow: 0 2px 5px rgba(40, 167, 69, 0.5); /* Green shadow effect */
+        transition: all 0.3s ease; /* Smooth hover effect */
+    }
+    
+    /* Hover effect for CTA button */
+    .cta-button:hover {
+        background-color: #218838; /* Darker green for hover */
+        box-shadow: 0 4px 10px rgba(40, 167, 69, 0.8); /* Enhanced shadow */
+    }
+    
+    /* Styles for menu when it's toggled open */
+    nav ul.show {
+        display: flex; /* Display menu items */
+    }
+
+    /* Placeholder for a 'close menu' feature */
+    .close-menu {
+        display: none;
+    }
+}
+
+
+
+/* Hero Section Start-----------------------------*/
+
+.hero {
+    text-align: center; /* Centers the text horizontally */
+    padding: 4rem; /* Adds padding around the hero section */
+    background-color: #42c471; /* Sets the background color to a green shade */
+}
+
+.hero h1 {
+    color: white; /* Sets the text color of the main heading to white */
+    font-size: 3rem; /* Sets the font size for the main heading */
+    font-weight: bold; /* Makes the main heading bold */
+    margin-bottom: 1rem; /* Adds space below the main heading */
+}
+
+.hero p {
+    font-size: 1.2rem; /* Sets the font size for the paragraph */
+    margin-bottom: 2rem; /* Adds space below the paragraph */
+    color: #555; /* Sets the text color to a dark gray */
+}
+
+/* Button Styling */
+.button-33 {
+    background-color: #28a745; /* Main green background */
+    border-radius: 100px; /* Makes the button rounded */
+    box-shadow: rgba(40, 167, 69, 0.2) 0 -25px 18px -14px inset, 
+                rgba(40, 167, 69, 0.15) 0 1px 2px, 
+                rgba(40, 167, 69, 0.15) 0 2px 4px, 
+                rgba(40, 167, 69, 0.15) 0 4px 8px, 
+                rgba(40, 167, 69, 0.15) 0 8px 16px, 
+                rgba(40, 167, 69, 0.15) 0 16px 32px; /* Subtle green shadows */
+    color: #fff; /* White text */
+    cursor: pointer; /* Changes the cursor to pointer on hover */
+    display: inline-block; /* Displays the button inline */
+    font-family: CerebriSans-Regular, -apple-system, system-ui, Roboto, sans-serif; /* Sets the font family */
+    padding: 7px 20px; /* Adds padding inside the button */
+    text-align: center; /* Centers the text inside the button */
+    text-decoration: none; /* Removes the underline from the button */
+    transition: all 250ms; /* Adds transition effect for smooth hover */
+    border: 0; /* Removes border */
+    font-size: 16px; /* Sets the font size */
+    user-select: none; /* Prevents text selection */
+    -webkit-user-select: none; /* Prevents text selection on Safari */
+    touch-action: manipulation; /* Optimizes touch events */
+}
+  
+.button-33:hover {
+    box-shadow: rgba(40, 167, 69, 0.35) 0 -25px 18px -14px inset, 
+                rgba(40, 167, 69, 0.25) 0 1px 2px, 
+                rgba(40, 167, 69, 0.25) 0 2px 4px, 
+                rgba(40, 167, 69, 0.25) 0 4px 8px, 
+                rgba(40, 167, 69, 0.25) 0 8px 16px, 
+                rgba(40, 167, 69, 0.25) 0 16px 32px; /* Enhanced green hover shadows */
+    transform: scale(1.05) rotate(-1deg); /* Slight hover transformation */
+}
+
+/* Subscription Form Styling */
+.newsletter {
+    padding: 2rem; /* Adds padding around the subscription form */
+    margin-top: 2rem; /* Adds top margin */
+    border-radius: 8px; /* Rounds the corners of the form */
+    color: white; /* Sets the text color to white */
+    animation: fadeIn 1s ease-in; /* Applies fade-in animation */
+}
+
+.newsletter h3 {
+    margin: 0 0 1rem; /* Adds space below the heading */
+}
+
+.newsletter p {
+    font-size: 1rem; /* Sets font size for the description */
+    margin-bottom: 1rem; /* Adds space below the paragraph */
+}
+
+.newsletter form {
+    display: flex; /* Uses flexbox layout for the form */
+    flex-direction: column; /* Stacks the form elements vertically */
+    align-items: center; /* Centers the form elements */
+}
+
+.newsletter input[type="email"] {
+    padding: 0.8rem; /* Adds padding inside the email input field */
+    width: 80%; /* Sets the width to 80% of its container */
+    max-width: 400px; /* Limits the maximum width to 400px */
+    border-radius: 5px; /* Rounds the corners of the input field */
+    border: none; /* Removes the border */
+    margin-bottom: 1rem; /* Adds space below the input */
+}
+
+.newsletter button {
+    background-color: #388e3c; /* Green background for the button */
+    color: white; /* White text */
+    padding: 0.8rem 2rem; /* Adds padding inside the button */
+    border: none; /* Removes the border */
+    border-radius: 5px; /* Rounds the corners of the button */
+    cursor: pointer; /* Changes the cursor to pointer on hover */
+    font-weight: bold; /* Makes the button text bold */
+    font-size: 1rem; /* Sets font size for the button */
+    transition: background-color 0.3s ease; /* Adds transition for smooth hover effect */
+}
+
+.newsletter button:hover {
+    background-color: #323832; /* Changes the background color on hover */
+}
+
+/* Popup Styling */
+.popup {
+    display: none; /* Hides the popup by default */
+    position: fixed; /* Fixes the position of the popup */
+    top: 30%; /* Positions the popup 30% from the top */
+    left: 50%; /* Centers the popup horizontally */
+    transform: translate(-50%, -50%); /* Centers the popup */
+    background-color: #fff; /* Sets a white background for the popup */
+    padding: 2rem; /* Adds padding inside the popup */
+    border-radius: 10px; /* Rounds the corners of the popup */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3); /* Adds a shadow to the popup */
+    text-align: center; /* Centers the text inside the popup */
+    z-index: 1000; /* Ensures the popup is above other content */
+    animation: scaleIn 0.5s ease-out; /* Adds a scale-in animation */
+}
+
+.popup p {
+    font-size: 1.2rem; /* Sets the font size for the popup message */
+    margin-top: 1rem; /* Adds top margin to the paragraph */
+}
+
+.flower {
+    font-size: 2rem; /* Sets the font size for the flower icon */
+    margin: 0.5rem; /* Adds margin around the flower icon */
+    display: inline-block; /* Makes the flower icon inline */
+    animation: floatFlowers 1.5s ease-in-out infinite alternate; /* Adds a floating animation */
+}
+
+@keyframes floatFlowers {
+    0% { transform: translateY(0); } /* Initial position of the flower */
+    100% { transform: translateY(-10px); } /* Final position of the flower */
+}
+
+@keyframes scaleIn {
+    0% { transform: scale(0.7); opacity: 0; } /* Initial state of the popup */
+    100% { transform: scale(1); opacity: 1; } /* Final state of the popup */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .newsletter {
+        padding: 1.5rem; /* Reduces padding for smaller screens */
+    }
+
+    .newsletter input[type="email"],
+    .newsletter button {
+        width: 90%; /* Makes the input and button take up 90% of the container width */
+    }
+}
+
+
+/* Hero Section End-----------------------------*/
+
+/* Popular Templates Section Start--------------------*/
+
+/* Popular Templates Section */
+.popular-templates {
+    text-align: center; /* Centers the text */
+    padding: 4rem; /* Adds padding around the section */
+    background-color: #42c471; /* Sets background color to a green shade */
+}
+
+.popular-templates h2 {
+    color: white; /* Sets the heading color to white */
+    font-size: 2rem; /* Sets font size of the heading */
+    margin-bottom: 2rem; /* Adds margin below the heading */
+}
+
+/* Grid Layout for Template Cards */
+.template-grid {
+    display: grid; /* Uses grid layout for the templates */
+    grid-template-columns: repeat(3, 1fr); /* Creates 3 equal columns */
+    gap: 1.5rem; /* Adds space between the grid items */
+    margin-bottom: 2rem; /* Adds space below the grid */
+}
+
+/* Template Card Styling */
+.template-card {
+    background-color: white; /* Sets background color to white */
+    padding: 1rem; /* Adds padding inside the card */
+    border-radius: 10px; /* Rounds the corners of the card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Adds subtle shadow around the card */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Adds smooth transitions for hover effects */
+    position: relative; /* Positions the card for pseudo-elements */
+    overflow: hidden; /* Hides any overflowing content */
+    text-align: left; /* Aligns text to the left inside the card */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+}
+
+/* Template Image Styling */
+.template-card img {
+    width: 100%; /* Makes image fill the card width */
+    border-radius: 5px; /* Rounds the corners of the image */
+    transition: transform 0.3s ease; /* Adds transition to image transform */
+}
+
+/* Template Title Styling */
+.template-title {
+    font-size: 1.2rem; /* Sets the font size of the title */
+    font-weight: bold; /* Makes the title bold */
+    color: #333; /* Sets title color to dark gray */
+    margin: 1rem 0 0.5rem 0; /* Adds margin around the title */
+}
+
+/* Template Description Styling */
+.template-description {
+    font-size: 0.9rem; /* Sets font size for description */
+    color: #555; /* Sets color to a lighter gray */
+    margin-bottom: 0.5rem; /* Adds space below description */
+}
+
+/* Template Price Styling */
+.template-price {
+    color: #388e3c; /* Sets price text color to green */
+    font-size: 1.2rem; /* Increases font size of the price */
+    font-weight: bold; /* Makes price text bold */
+    background-color: #e0f7e9; /* Sets background color to a light green */
+    padding: 0.3rem 0.5rem; /* Adds padding around price */
+    border-radius: 5px; /* Rounds the corners of the price box */
+    display: inline-block; /* Makes the price display inline */
+    margin-top: 0.5rem; /* Adds space above the price */
+}
+
+/* Link Styling for Template Cards */
+.template-link {
+    text-decoration: none; /* Removes underline from links */
+    color: inherit; /* Inherits text color */
+    display: block; /* Makes link wrap the entire card */
+}
+
+/* Hover Effects for Template Cards */
+.template-card:hover {
+    transform: scale(1.05); /* Slightly scales the card on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Adds a more prominent shadow */
+}
+
+/* Hover Effects for Template Card Images */
+.template-card:hover img {
+    transform: scale(1.1); /* Slightly scales the image on hover */
+}
+
+/* Bright Yellow Glow Effect on Card */
+.template-card::before {
+    content: ''; /* Empty content for pseudo-element */
+    position: absolute; /* Positions the pseudo-element absolutely within the card */
+    top: 0; /* Aligns at the top */
+    left: 0; /* Aligns at the left */
+    right: 0; /* Aligns at the right */
+    bottom: 0; /* Aligns at the bottom */
+    background: rgba(255, 255, 0, 0.5); /* Adds a semi-transparent yellow background */
+    opacity: 0; /* Starts as invisible */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+    border-radius: 10px; /* Rounds the corners of the glow */
+    box-shadow: 0 0 30px rgba(255, 255, 0, 0.8); /* Adds a glow effect around the card */
+}
+
+/* Hover Effect for Glow */
+.template-card:hover::before {
+    opacity: 1; /* Makes the glow visible on hover */
+}
+
+/* Explore More Button Styling */
+.explore-more {
+    background-color: #388e3c; /* Sets button background color to green */
+    color: white; /* Sets button text color to white */
+    padding: 0.8rem 2rem; /* Adds padding inside the button */
+    border: none; /* Removes border */
+    border-radius: 5px; /* Rounds button corners */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    font-weight: bold; /* Makes the button text bold */
+    font-size: 1rem; /* Sets font size for the button */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+/* Hover Effect for Explore More Button */
+.explore-more:hover {
+    background-color: #323832; /* Changes button color on hover */
+}
+
+/* Responsive Layout for Mobile */
+@media (max-width: 768px) {
+    .template-grid {
+        grid-template-columns: 1fr; /* Changes grid to a single column on small screens */
+    }
+}
+
+
+
+/* Popular Templates Section End--------------------*/
+
+/* About Section Starts------*/
+
+/* About Us Section Styling */
+.about-us {
+    text-align: center; /* Centers the content within the section */
+    padding: 4rem; /* Adds padding around the section */
+    background-color: #42c471; /* Sets background color to green */
+    max-width: 700px; /* Limits the section's maximum width */
+    margin: auto; /* Centers the section horizontally */
+    border-radius: 10px; /* Rounds the corners of the section */
+}
+
+/* Heading Styling */
+.about-us h2 {
+    font-size: 2rem; /* Sets font size for the heading */
+    margin-bottom: 2rem; /* Adds margin below the heading */
+    color: white; /* Sets the text color to white */
+}
+
+/* About Us Text Paragraph Styling */
+.about-text p {
+    font-size: 1.1rem; /* Sets font size for the paragraph */
+    /* color: #333; /* The color is commented out but can be used for a darker text color */
+    line-height: 1.6; /* Adjusts line height for better readability */
+    margin-bottom: 2rem; /* Adds space below the paragraph */
+}
+
+/* Follow Button Styling */
+.follow-button {
+    display: inline-flex; /* Aligns icon and text horizontally */
+    align-items: center; /* Vertically aligns the items in the button */
+    padding: 0.8rem 1.5rem; /* Adds padding inside the button */
+    background-color: #161718; /* Sets the background color to dark gray (Twitter-style) */
+    color: white; /* Sets button text color to white */
+    border: none; /* Removes button border */
+    border-radius: 50px; /* Rounds the button corners */
+    font-size: 1rem; /* Sets font size for button text */
+    font-weight: bold; /* Makes the button text bold */
+    cursor: pointer; /* Changes cursor to pointer on hover */
+    transition: box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transitions for hover effects */
+}
+
+/* Icon inside the Follow Button */
+.follow-button i {
+    margin-right: 0.5rem; /* Adds space between the icon and text */
+    font-size: 1.2rem; /* Increases the font size of the icon */
+}
+
+/* Follow Button Hover Effects */
+.follow-button:hover {
+    box-shadow: 0 0 15px rgba(230, 237, 241, 0.8); /* Adds a glowing effect around the button */
+    transform: scale(1.05); /* Slightly scales the button on hover */
+}
+
+/* Follow Button Hover Glow Effect */
+.follow-button::after {
+    content: ""; /* Adds an empty pseudo-element to create the glow effect */
+    position: absolute; /* Positions the pseudo-element absolutely within the button */
+    top: 0; /* Aligns at the top */
+    left: 0; /* Aligns at the left */
+    right: 0; /* Aligns at the right */
+    bottom: 0; /* Aligns at the bottom */
+    border-radius: 50px; /* Rounds the corners of the glow effect */
+    background: rgba(255, 255, 255, 0.2); /* Creates a semi-transparent white glow */
+    transition: opacity 0.3s ease; /* Smooth transition for opacity */
+    opacity: 0; /* Initially hides the glow effect */
+}
+
+/* Follow Button Glow Effect on Hover */
+.follow-button:hover::after {
+    opacity: 1; /* Makes the glow visible on hover */
+}
+
+/* About Section Ends------*/
+
+
+/* Testimonials Section */
+
+/* Testimonials Section Styling */
+.testimonials {
+    text-align: center; /* Centers the content */
+    padding: 4rem 2rem; /* Adds padding to the section */
+    color: white; /* Sets the default text color to white */
+}
+
+/* Testimonials Header Styling */
+.testimonials-header h2 {
+    font-size: 2rem; /* Sets font size for the header */
+    margin-bottom: 0.5rem; /* Adds space below the header */
+    color: white; /* Sets header text color to white */
+}
+
+.testimonials-header p {
+    font-size: 1rem; /* Sets font size for the description */
+    color: #333; /* Sets description text color to dark gray */
+    margin-bottom: 2rem; /* Adds space below the description */
+}
+
+/* Testimonials Cards Container */
+.testimonials-cards {
+    display: flex; /* Uses flexbox for the layout */
+    flex-wrap: wrap; /* Allows wrapping of cards */
+    justify-content: center; /* Centers the cards horizontally */
+    gap: 1.5rem; /* Adds space between the cards */
+}
+
+/* Individual Testimonial Card Styling */
+.testimonial-card {
+    background: linear-gradient(135deg, #159957, #155799); /* Gradient background from green to blue */
+    border-radius: 12px; /* Rounds the corners of the card */
+    padding: 2rem; /* Adds padding inside the card */
+    max-width: 300px; /* Limits the card's width */
+    text-align: left; /* Aligns text to the left inside the card */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2); /* Adds shadow around the card */
+    transition: transform 0.3s, box-shadow 0.3s; /* Smooth transition for hover effects */
+}
+
+/* Hover Effects for Testimonial Cards */
+.testimonial-card:hover {
+    transform: translateY(-10px); /* Slightly raises the card on hover */
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.4); /* Increases the shadow for a floating effect */
+}
+
+/* Profile Image Styling */
+.profile-img {
+    width: 80px; /* Sets the image width */
+    height: 80px; /* Sets the image height */
+    border-radius: 50%; /* Makes the image circular */
+    margin-bottom: 1rem; /* Adds space below the image */
+    object-fit: cover; /* Ensures the image covers the area without distortion */
+    border: 3px solid white; /* Adds a white border around the image */
+}
+
+/* Testimonial Card Header (Name) Styling */
+.testimonial-card h3 {
+    font-size: 1.2rem; /* Sets font size for the name */
+    margin-bottom: 0.3rem; /* Adds space below the name */
+    color: white; /* Sets the name text color to white */
+}
+
+/* Role Styling inside Testimonial Cards */
+.role {
+    display: block; /* Makes the role text block-level */
+    font-size: 0.9rem; /* Sets font size for the role */
+    font-weight: bold; /* Makes the role text bold */
+    color: #f3f3f3; /* Sets the role text color to light gray */
+    margin-bottom: 1rem; /* Adds space below the role */
+}
+
+/* Testimonial Text Styling */
+.testimonial-card p {
+    font-size: 0.95rem; /* Sets font size for the testimonial text */
+    color: #e0e0e0; /* Sets the text color to a lighter gray */
+}
+
+
+
+
+/* Footer Section---------Start */
+/* Footer Section Styling */
+.footer {
+    background-color: #f9f9f9; /* Light background color for the footer */
+    padding: 2rem 1rem; /* Adds padding to the footer */
+    color: #333; /* Sets the text color to dark gray */
+    font-family: Arial, sans-serif; /* Sets the font for the footer */
+    border-top: 1px solid #e0e0e0; /* Adds a subtle top border to separate the footer from the content */
+}
+
+/* Footer Container */
+.footer-container {
+    display: flex; /* Uses flexbox to arrange items in the footer */
+    justify-content: space-between; /* Space between the left and right sections */
+    align-items: center; /* Centers the items vertically */
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    margin-bottom: 1.5rem; /* Adds space below the container */
+}
+
+/* Left Section (Footer Links) */
+.footer-left h4 {
+    font-size: 1.2rem; /* Sets the font size for the heading */
+    margin-bottom: 1rem; /* Adds space below the heading */
+}
+
+.footer-links {
+    display: flex; /* Uses flexbox for the link layout */
+    gap: 1.5rem; /* Adds space between each link */
+}
+
+.footer-links a {
+    color: #333; /* Sets link color to dark gray */
+    text-decoration: none; /* Removes underline from the links */
+    font-size: 0.9rem; /* Sets the font size for the links */
+}
+
+.footer-links a:hover {
+    color: #007bff; /* Changes link color to blue on hover */
+    text-decoration: underline; /* Underlines the link on hover */
+}
+
+/* Right Section (Newsletter Form) */
+.footer-right p {
+    font-size: 1rem; /* Sets the font size for the paragraph */
+    margin-bottom: 0.5rem; /* Adds space below the paragraph */
+}
+
+.newsletter-form {
+    display: flex; /* Uses flexbox for the form layout */
+    gap: 0.5rem; /* Adds space between the input and button */
+}
+
+.newsletter-form input {
+    border: 1px solid #ccc; /* Light gray border around the input */
+    border-radius: 4px; /* Rounds the corners of the input field */
+    padding: 0.5rem; /* Adds padding inside the input field */
+    font-size: 0.9rem; /* Sets the font size inside the input */
+    flex: 1; /* Ensures the input takes up available space */
+}
+
+.newsletter-form button {
+    background-color: #007bff; /* Blue background color for the button */
+    border: none; /* Removes the border */
+    color: white; /* Sets the text color to white */
+    padding: 0.5rem 1rem; /* Adds padding inside the button */
+    border-radius: 4px; /* Rounds the corners of the button */
+    font-size: 0.9rem; /* Sets font size inside the button */
+    cursor: pointer; /* Changes the cursor to a pointer on hover */
+    transition: background-color 0.3s ease; /* Smooth transition for background color */
+}
+
+.newsletter-form button:hover {
+    background-color: #0056b3; /* Darker blue color on hover */
+}
+
+/* Footer Bottom Section */
+.footer-bottom {
+    display: flex; /* Uses flexbox for the layout */
+    justify-content: space-between; /* Space between left and right sections */
+    flex-wrap: wrap; /* Allows items to wrap on smaller screens */
+    border-top: 1px solid #e0e0e0; /* Adds a top border to separate the bottom section */
+    padding-top: 1rem; /* Adds space above the bottom section */
+    font-size: 0.8rem; /* Sets font size for the footer bottom text */
+}
+
+/* Footer Bottom Links */
+.footer-bottom-links {
+    display: flex; /* Uses flexbox for the link layout */
+    gap: 1rem; /* Adds space between the links */
+}
+
+.footer-bottom-links a {
+    color: #666; /* Sets link color to light gray */
+    text-decoration: none; /* Removes underline from the links */
+}
+
+.footer-bottom-links a:hover {
+    text-decoration: underline; /* Underlines the links on hover */
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column; /* Stacks items vertically */
+        align-items: flex-start; /* Aligns items to the left */
+        gap: 1.5rem; /* Adds space between stacked items */
+    }
+
+    .footer-bottom {
+        flex-direction: column; /* Stacks items vertically */
+        gap: 1rem; /* Adds space between stacked items */
+        align-items: flex-start; /* Aligns items to the left */
+    }
+}
+
+
+

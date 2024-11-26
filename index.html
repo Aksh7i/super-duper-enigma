@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Basic HTML metadata and document setup -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mac Bee</title>
+    
+    <!-- Link to external CSS file for styling -->
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <!-- Header Section -->
+    <header>
+        <!-- Logo Section -->
+        <div class="logo">
+            <h1>Mac Bee</h1>
+        </div>
+        
+        <!-- Navigation Menu -->
+        <nav>
+            <ul id="menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="templates.html">Templates</a></li>
+                <li><a href="terms.html">Terms & Conditions</a></li>
+                <!-- Call-to-Action Button -->
+                <li><a href="https://365daysgrowth.gumroad.com/l/secondbrain"><button class="cta-button">Get Second Brain 5.0</button></a></li>
+            </ul>
+        </nav>
+        
+        <!-- Hamburger Menu for Mobile View -->
+        <div class="hamburger" onclick="toggleMenu()">
+            &#9776;
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <!-- Main Heading -->
+        <h1>Discover Minimalist Notion Templates</h1>
+        <p>Simplify productivity and organize your life with beautiful, efficient templates.</p>
+        
+        <!-- Browse More Templates Button -->
+        <button onclick="location.href = 'templates.html'" class="button-33" role="button">Browse More Templates</button>
+
+        <!-- Newsletter Subscription Form -->
+        <div class="newsletter">
+            <h3>Subscribe to Our Newsletter</h3>
+            <p>When you join my email list, it’s not just about free products or premium offers.</p>
+            <form id="subscribeForm" onsubmit="showPopup(event)">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+
+        <!-- Subscription Confirmation Popup -->
+        <div class="popup" id="popup">
+            <div class="flower">🌸</div>
+            <div class="flower">🌼</div>
+            <div class="flower">🌸</div>
+            <p>Thank you for subscribing!</p>
+        </div>
+    </section>
+
+    <!-- Popular Templates Section -->
+    <section class="popular-templates">
+        <!-- Section Heading -->
+        <h2>Popular Templates</h2>
+        
+        <!-- Template Cards Grid -->
+        <div class="template-grid">
+            <!-- Template Card 1 -->
+            <a href="https://365daysgrowth.gumroad.com/l/classroommanagement" target="_blank" class="template-link">
+                <div class="template-card">
+                    <img src="./Assets/product1.png" alt="Template 1">
+                    <h3 class="template-title">Class Management</h3>
+                    <p class="template-description">Organize and manage all your tasks with ease using this intuitive project manager template.</p>
+                    <p class="template-price">$20</p>
+                </div>
+            </a>
+            
+            <!-- Additional Template Cards -->
+            <!-- Duplicate the template-card structure as needed for more templates -->
+            <a href="https://365daysgrowth.gumroad.com/l/casemanagement" target="_blank" class="template-link">
+                <div class="template-card">
+                    <img src="./Assets/product2.png" alt="Template 1">
+                    <h3 class="template-title">Case Management</h3>
+                    <p class="template-description">Organize and manage all your tasks with ease using this intuitive project manager template.</p>
+                    <p class="template-price">$20</p>
+                </div>
+            </a>
+            <a href="https://365daysgrowth.gumroad.com/l/sideproject" target="_blank" class="template-link">
+                <div class="template-card">
+                    <img src="./Assets/product3.png" alt="Template 1">
+                    <h3 class="template-title">Project Manager</h3>
+                    <p class="template-description">Organize and manage all your tasks with ease using this intuitive project manager template.</p>
+                    <p class="template-price">$20</p>
+                </div>
+            </a>
+        </div>
+        
+        <!-- Explore More Templates Button -->
+        <button onclick="location.href = 'templates.html'" class="explore-more">Explore More</button>
+    </section>
+
+    <!-- About Section -->
+    <section class="about-us">
+        <!-- About Section Heading -->
+        <h2>About Me</h2>
+        
+        <!-- About Text -->
+        <div class="about-text">
+            <p>
+                Hi, I'm X, the creator of these amazing Notion templates. With over six years of experience using Notion, I've transformed my life through its powerful organizational tools. My passion is to help others achieve the same by making their lives more organized, reducing stress, and freeing their minds.
+            </p>
+        </div>
+        
+        <!-- Social Media Follow Button -->
+        <button class="follow-button">
+            <i class="fab fa-twitter"></i> Follow us on X
+        </button>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <!-- Testimonials Header -->
+        <div class="testimonials-header">
+            <h2>What People Say</h2>
+            <p>Discover what our satisfied customers have to say about their experiences with our templates.</p>
+        </div>
+        
+        <!-- Testimonials Cards -->
+        <div class="testimonials-cards">
+            <!-- Testimonial Card 1 -->
+            <div class="testimonial-card">
+                <img src="./Assets/men1.jpg" alt="Profile Image" class="profile-img">
+                <h3>Sarah Johnson</h3>
+                <span class="role">Small Business Owner</span>
+                <p>
+                    Since integrating these templates into my workflow, I've experienced a significant improvement in efficiency and organization.
+                </p>
+            </div>
+            
+            <!-- Additional Testimonial Cards -->
+            <div class="testimonial-card">
+                <img src="./Assets/women1.jpg" alt="Profile Image" class="profile-img">
+                <h3>Sarah Johnson</h3>
+                <span class="role">Small Business Owner</span>
+                <p>
+                    Since integrating these templates into my workflow, I've experienced a significant improvement in efficiency and organization.
+                </p>
+            </div>
+            <div class="testimonial-card">
+                <img src="./Assets/men2.jpg" alt="Profile Image" class="profile-img">
+                <h3>Sarah Johnson</h3>
+                <span class="role">Small Business Owner</span>
+                <p>
+                    Since integrating these templates into my workflow, I've experienced a significant improvement in efficiency and organization.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer Section -->
+    <footer class="footer">
+        <div class="footer-container">
+            <!-- Footer Left: Links Section -->
+            <div class="footer-left">
+                <h4>Notion Templates</h4>
+                <nav class="footer-links">
+                    <a href="./templates.html">Products</a>
+                    <a href="https://365daysgrowth.gumroad.com/l/secondbrain">Second Brain</a>
+                    <a href="https://365daysgrowth.gumroad.com/l/unistudents">Student Brain</a>
+                    <a href="https://365daysgrowth.gumroad.com/l/eatfrog">Eat That Frog</a>
+                    <a href="./privacy.html">Privacy</a>
+                </nav>
+            </div>
+            
+            <!-- Footer Right: Newsletter Subscription -->
+            <div class="footer-right">
+                <p>Join our newsletter</p>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter your email" required>
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        
+        <!-- Footer Bottom -->
+        <div class="footer-bottom">
+            <p>© 2024 Notion Templates. All rights reserved.</p>
+            <nav class="footer-bottom-links">
+                <a href="./terms.html">Terms</a>
+                <a href="./privacy.html">Privacy</a>
+                <a href="#">Cookies</a>
+            </nav>
+        </div>
+    </footer>
+
+    <!-- JavaScript File -->
+    <script src="script.js"></script>
+</body>
+</html>
